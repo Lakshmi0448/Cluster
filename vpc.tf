@@ -7,7 +7,7 @@ resource "google_project_service" "container" {
 }
 
 resource "google_compute_network" "main" {
-  name                            = "main"
+  name                            = var.network_name
   routing_mode                    = "REGIONAL"
   auto_create_subnetworks         = false
   delete_default_routes_on_create = false

@@ -1,6 +1,6 @@
 provider "google" {
-  project = "kubernetes-project-375706"
-  region  = "asia-south1"
+  project = var.gcp_project_id
+  region  = var.region
 }
 
 terraform {
