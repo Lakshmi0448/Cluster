@@ -3,6 +3,7 @@ resource "google_compute_subnetwork" "subnet1" {
   ip_cidr_range            = "10.0.0.0/18"
   region                   = "asia-south1"
   network                  = google_compute_network.main.id
+  private_ip_google_access = true
 
   secondary_ip_range {
     range_name    = "k8s-pods"
