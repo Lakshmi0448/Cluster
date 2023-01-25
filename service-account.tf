@@ -3,7 +3,7 @@ resource "google_service_account" "cluster-service-account" {
 }
 
 resource "google_project_iam_member" "cluster-service-account" {
-  project = "kubernetes-project-375706"
+  project = "var.gcp_project_id"
   role    = "roles/storage.admin"
   member  = "serviceAccount:${google_service_account.cluster-service-account.email}"
 }
